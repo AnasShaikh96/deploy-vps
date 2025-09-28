@@ -17,26 +17,26 @@ Why in the same LAN and not on public internet? Search for Private vs Public IPs
 
 1. Access your Secondary machine as admin.
 2. Run these commands
-`sudo apt update
+```sudo apt update
 sudo apt upgrade -y
-`
+```
 3. Install OpenSSH-server and enable it
-`
+```
 sudo apt install -y openssh-server
 sudo systemctl enable --now ssh
-`
+```
 4. Simply check the status of ssh server, if it shows live then we're good to go.
-`sudo systemctl status sshd`
+```sudo systemctl status sshd```
 
 5. Run below command to check the ip address of your Secondary machine and copy it somewhere.
-`hostname -I`
+```hostname -I```
 
 
 # Accessing local VPS on Main Machine. 
 
 1. Windows : Install WSL on your machine if haven't done already.
 2. open terminal on your **main machine** and run following command
-`ssh root@192.ip.ip.ip`
+```ssh root@192.ip.ip.ip```
 **Note**: device name root can be different in your context.
 3. If done properly a password prompt will appear. Add password and Viola, We're in!!
 
